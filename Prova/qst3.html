@@ -1,0 +1,38 @@
+<!--SObre CSS responda.
+a) Quais são as formas de incluir css em um documento HTML 
+cite as três e explique que impacto isso tem no processamento das regras.
+R: p {
+     color: #FF0000;
+     font-size: 100px;
+     font-weidgt: bold;} O nosso "p" é o nosso seletor, então selecionamos o p e declaramos
+     que "p" vai ter uma cor vermelha com suas fontes em 100px e bold.
+
+    span{background-color: greenyellow;}
+    table, td, th{
+        border: 5px solid pink;
+        border-collapse: collapse;
+    }
+        span é um selector onde dentro desse selector temos uma declaração de tipo background-color: greenyellow; 
+        e essa cor deve aparecer atrás dos elementos. Temos outros selectors que são table, td e th, porém esses estão 
+        dentro de outro selector que é o span e esses selectors vão aparecer na frente do background-color: greenyellow;
+        pórem com outras declarações que vão estar associadas ao table, td e ao th.
+    
+     img{
+    width: 100px;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+   } nessa outra regra, temos um selector de uma imagem que vai ter como declaração sua altura, o quanto as bordes serão reduzidas
+    um display de tipo flex que faça que o justify-content: center possa aparecer no centro.
+b) Como funcionam seletores CSS explique se necessário com exemplos.
+R: Seletores selecionam qual/quais elemtos seram aplicadas as regras de CSS, por exemplo:
+Seletores Universais: Seleciona todos os elementos em um documento. Exemplo: * { margin: 0; padding: 0; }.
+Seletores de Classe: Selecionam elementos com uma classe específica. Exemplo: .minha-classe { font-size: 16px; }. 
+        
+c) Como funcionam o posicionamento de elementos no HTML e CSS, 
+descreva e explique se necessário com exemplos.
+R:  #box1{
+display: block;
+margin-left: auto;
+margin-roght: auto;} O posicionamento do #box1 está centralizada,
+pois ele está com margens para direita e para a esquerda onde o display: block; o deixa  -->
