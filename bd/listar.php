@@ -19,26 +19,21 @@
     ?>
     <table>
         <tr>
-            <td><a href="editar.php?pessoa_id=<?php echo $registro["id"]?>">
-                <?php echo $registro["id"] ?>
-            </td>
             <th>ID</th>
             <th>Nome</th>
             <th>Email</th>
         </tr>
         <?php
-        foreach ($listaPessoa as $registro) {
-            ?>
-        for($i=0; $i <count($listaPessoa); $i++)
+        for($i=0; $i <count($listaPessoa); $i++){
             ?>
             <tr>
-                <td><?php echo $listaPessoa[$i]["id"] ?></td>
+                <td><?php echo $listaPessoa[$i]["idusuario"] ?></td>
                 <td><?php echo $listaPessoa[$i]["nome"] ?></td>
                 <td><?php echo $listaPessoa[$i]["email"] ?></td>
             </tr>
             <?php
-            }
-            ?>
+        }
+        ?>
     </table>
 
 </body>
