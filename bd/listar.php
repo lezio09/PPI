@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>listar</title>
+    <style>
+        
+    </style>
 </head>
 <body>
+    
     <?php
-        include_once("db.php");
-        include_once("pesoa_da.php");
-        $listar_pessoa = getUsuarios();
-        //array[0]{id, nome:"Lezio", email: "lezio@gmail.com}
-        //array[1]{id, nome:"Lezio", email: "lezio@gmail.com}
-        //array[2]{id, nome:"Lezio", email: "lezio@gmail.com}
+    include_once("db.php");
+    include_once("pessoa_da.php");
+
+    $listaPessoa = getUsuarios();
+    
     ?>
     <table>
         <tr>
+            <td><a href="editar.php?pessoa_id=<?php echo $registro["id"]?>">
+                <?php echo $registro["id"] ?>
+            </td>
             <th>ID</th>
-            <th>nome</th>
+            <th>Nome</th>
             <th>Email</th>
         </tr>
-
         <?php
-            for ($i = 0; $i < count($listar_pessoa); $i++) {
-                ?>
-                <tr>
-                    <td><?php echo $listar_pessoa[$i]["id"] ?></td>
-                    <td><?php echo $listar_pessoa[$i]["nome"] ?></td>
-                    <td><?php echo $listar_pessoa[$i]["email"] ?></td>
-                </tr>
-                <?php
+        foreach ($listaPessoa as $registro) {
+            ?>
+        for($i=0; $i <count($listaPessoa); $i++)
+            ?>
+            <tr>
+                <td><?php echo $listaPessoa[$i]["id"] ?></td>
+                <td><?php echo $listaPessoa[$i]["nome"] ?></td>
+                <td><?php echo $listaPessoa[$i]["email"] ?></td>
+            </tr>
+            <?php
             }
-
-
-        ?>
-
-
+            ?>
     </table>
+
 </body>
 </html>

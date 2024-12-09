@@ -3,24 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>cadastro</title>
 </head>
 <body>
-    <style>
-        form{
-            display: flex;
-            flex-direction: column;
-            width: 200px;
-            margin: 0 auto;
-        }
-    </style>
-    <form action = "PessoaController.php" method="post">
-        <label for="nome"> Nome </label>
+    <form action="pessoaController.php" method="post">
+        <label for="nome">Nome </label>
         <input type="text" name="nome" id="nome">
-        <label for="email"> Email </label>
+        <label for="email">Email </label>
         <input type="email" name="email" id="email">
         <input type="text" name="acao" value="cadastrar" hidden>
         <input type="submit" value="Adicionar">
-    </form>  
+    </form>
 </body>
 </html>
